@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GenerateGraph">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F6F6"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/llActionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/back_arrow"
+                app:tint="@color/dark_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/euclidcirculara_bold"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="10dp"
+                android:text="GenerateGraph"
+                android:textColor="@color/dark_gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llActionbar"
+            app:layout_constraintVertical_bias="0.0">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:weightSum="3"
+                android:background="@color/white"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+
+                    android:gravity="center"
+
+                    android:layout_gravity="center"
+                    android:text="Select Date "
+                    android:drawableTint="@color/dark_gray"
+                    android:layout_weight="1"
+android:fontFamily="@font/euclidcirculara_bold"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp"  />
+                <RelativeLayout
+                    style="@style/LoginTextInputOuterFieldStyle2"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+
+                    android:layout_weight="2"
+                    android:background="@drawable/border"
+                    app:boxStrokeColor="@color/purple_700"
+                    app:hintTextColor="@color/purple_700">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sputype"
+                        android:entries="@array/array_utype"
+                        android:textColor="@color/dark_gray"
+                        android:fontFamily="@font/euclidcirculara_semibold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+            </LinearLayout>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/chart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_above="@+id/seekBar1" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="Prediction Amount"
+                    android:fontFamily="@font/euclidcirculara_semibold"
+                    android:textColor="#FDFDFD"
+                    android:textAllCaps="false"
+                    android:id="@+id/Prediction"
+                    android:textSize="17sp"
+                    android:padding="@dimen/_5sdp"
+
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:background="@drawable/button_login_fill"
+                    android:layout_height="wrap_content">
+
+                </androidx.appcompat.widget.AppCompatButton>
+                <androidx.appcompat.widget.AppCompatTextView
+                     android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/euclidcirculara_bold"
+                    android:gravity="center|start"
+                    android:layout_marginLeft="@dimen/_10sdp"
+
+
+                    android:text="avg Amount"
+                    android:textColor="#110019"
+                    android:textSize="@dimen/_18sdp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EB Monitoring</string>
+
+    <string-array name="array_utype">
+        <item>Select Login Type</item>
+        <item>Admin</item>
+        <item>Member</item>
+
+
+    </string-array>
+
+</resources>

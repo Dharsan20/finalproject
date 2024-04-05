@@ -1,0 +1,1536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyBusinessReport">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F6F6"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/llActionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/back_arrow"
+                app:tint="@color/dark_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/euclidcirculara_bold"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="10dp"
+                android:text="My Business Report"
+                android:textColor="@color/dark_gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llActionbar"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/border"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:weightSum="2">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/chref"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@color/androidx_core_ripple_material_light"
+                        android:fontFamily="@font/euclidcirculara_semibold"
+                        android:padding="1dp"
+
+                        android:text="Business Gives"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dark_gray"
+                        android:textStyle="bold"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/cniref"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:fontFamily="@font/euclidcirculara_semibold"
+                        android:padding="2dp"
+
+                        android:text="Received Business"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dark_gray"
+                        android:textStyle="bold"
+
+                        />
+
+
+                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                android:visibility="visible">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclidcirculara_regular"
+                        android:text="Last 1 Year"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclidcirculara_regular"
+                        android:text="Last 6 Month"
+                        android:textSize="12sp" />
+
+                </RadioGroup>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/euclidcirculara_bold"
+                    android:gravity="center"
+
+                    android:text="Total Business Gives Rs.3,30,000/-"
+                    android:textColor="#EC6F85"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="8dp"
+
+                    android:background="@drawable/border_five"
+
+                    android:orientation="horizontal"
+                    android:weightSum="1.2">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_semibold"
+                            android:text="S.No"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_semibold"
+                            android:text="Member Name"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                             android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_semibold"
+                            android:text="Give Business(Rs)"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+
+                android:background="@drawable/border_six"
+
+                android:orientation="vertical"
+                android:weightSum="1.2"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                       android:layout_marginTop="@dimen/_5sdp"
+
+                    android:orientation="horizontal"
+                    android:weightSum="1.2"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="1"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="S Kumar"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text=" Rs.80000/-"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:orientation="horizontal"
+                    android:weightSum="1.2"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="2"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="Ram"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text=" Rs.25000/-"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:orientation="horizontal"
+                    android:weightSum="1.2"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="3"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="Arun"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text=" Rs.35000/-"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:orientation="horizontal"
+                    android:weightSum="1.2"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="4"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="Raja"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text=" Rs.20000/-"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:orientation="horizontal"
+                    android:weightSum="1.2"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="5"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="S Kumar"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text=" Rs.90000/-"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:orientation="horizontal"
+                    android:weightSum="1.2"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="6"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="C Lynn"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text=" Rs.20000/-"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:orientation="horizontal"
+                    android:weightSum="1.2"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="7"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="R Kumar"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text=" Rs.50000/-"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:orientation="horizontal"
+                    android:weightSum="1.2"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="8"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text="D Kumar"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_regular"
+                            android:text=" Rs.10000/-"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                android:visibility="gone">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclidcirculara_regular"
+                        android:text="Last 1 Year"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclidcirculara_regular"
+                        android:text="Last 6 Month"
+                        android:textSize="12sp" />
+
+                </RadioGroup>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/euclidcirculara_bold"
+                    android:gravity="center"
+
+                    android:text="Total Business Gives Rs.30,000/-"
+                    android:textColor="#EC6F85"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="8dp"
+
+                    android:background="@drawable/border_five"
+
+                    android:orientation="horizontal"
+                    android:weightSum="1.2">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_semibold"
+                            android:text="S.No"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_semibold"
+                            android:text="Member Name"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/euclidcirculara_semibold"
+                            android:text="Give Business(Rs)"
+                            android:textColor="@color/dark_gray" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+
+                    android:background="@drawable/border_six"
+
+                    android:orientation="vertical"
+                    android:weightSum="1.2"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:orientation="horizontal"
+                        android:weightSum="1.2"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="1"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="S Kumar"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text=" Rs.80000/-"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:orientation="horizontal"
+                        android:weightSum="1.2"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="2"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="Ram"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text=" Rs.25000/-"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:orientation="horizontal"
+                        android:weightSum="1.2"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="3"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="Arun"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text=" Rs.35000/-"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:orientation="horizontal"
+                        android:weightSum="1.2"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="4"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="Raja"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text=" Rs.20000/-"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:orientation="horizontal"
+                        android:weightSum="1.2"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="5"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="S Kumar"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text=" Rs.90000/-"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:orientation="horizontal"
+                        android:weightSum="1.2"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="6"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="C Lynn"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text=" Rs.20000/-"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:orientation="horizontal"
+                        android:weightSum="1.2"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="7"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="R Kumar"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text=" Rs.50000/-"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:orientation="horizontal"
+                        android:weightSum="1.2"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="8"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text="D Kumar"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/euclidcirculara_regular"
+                                android:text=" Rs.10000/-"
+                                android:textColor="@color/dark_gray" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

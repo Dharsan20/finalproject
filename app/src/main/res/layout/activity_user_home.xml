@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserHome">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgViewBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:onClick="goto_admin"
+        app:srcCompat="@drawable/back_arrow"
+        app:tint="@color/dark_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/euclidcirculara_bold"
+        android:gravity="center"
+        android:lines="1"
+        android:padding="10dp"
+        android:text="ename"
+        android:textColor="@color/dark_gray"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgViewBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10sp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/bottomButtonsGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ename">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="2"
+            tools:listitem="@layout/recyclerview_item_layout" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Group for bottom buttons -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomButtonsGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Calculate Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/calculateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/button_login_fill"
+            android:backgroundTint="@color/abc_search_url_text_normal"
+            android:fontFamily="@font/euclidcirculara_semibold"
+            android:text="Calculate"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/generateGraphButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Generate Graph Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/generateGraphButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/button_login_fill"
+            android:backgroundTint="@color/abc_search_url_text_normal"
+            android:fontFamily="@font/euclidcirculara_semibold"
+            android:text="Generate graph"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/calculateButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

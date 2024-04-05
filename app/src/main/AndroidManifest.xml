@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/eb"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CNI"
+        tools:targetApi="31">
+        <activity
+            android:name=".GenerateGraph"
+            android:exported="false" />
+        <activity
+            android:name=".BillCalculator"
+            android:exported="false" />
+        <activity
+            android:name=".ViewDetails"
+            android:exported="false" />
+        <activity
+            android:name=".AddAppliances"
+            android:exported="false" />
+        <activity
+            android:name=".UserHome"
+            android:exported="false" />
+        <activity
+            android:name=".Signup"
+            android:exported="false" />
+        <activity
+            android:name=".Admin"
+            android:exported="false" />
+        <activity
+            android:name=".CNI_News"
+            android:exported="false" />
+        <activity
+            android:name=".CoreCommittes"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".MoreDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ViewProfile"
+            android:exported="false" />
+        <activity
+            android:name=".InactiveMember"
+            android:exported="false" />
+        <activity
+            android:name=".OpenCategory"
+            android:exported="false" />
+        <activity
+            android:name=".MyChapterReport"
+            android:exported="false" />
+        <activity
+            android:name=".MyOverallReport"
+            android:exported="false" />
+        <activity
+            android:name=".OneToOneReports"
+            android:exported="false" />
+        <activity
+            android:name=".AttendanceReport"
+            android:exported="false" />
+        <activity
+            android:name=".MyVistorsReport"
+            android:exported="false" />
+        <activity
+            android:name=".MyReferralLists"
+            android:exported="false" />
+        <activity
+            android:name=".MyBusinessReport"
+            android:exported="false" />
+        <activity
+            android:name=".OnetoOneReport"
+            android:exported="false" />
+        <activity
+            android:name=".OneToOne"
+            android:exported="false" />
+        <activity
+            android:name=".GiveThankDetails"
+            android:exported="false" />
+        <activity
+            android:name=".GiveThank"
+            android:exported="false" />
+        <activity
+            android:name=".GiveReferralDetails"
+            android:exported="false" />
+        <activity
+            android:name=".GiveReferral"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

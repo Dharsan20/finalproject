@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OneToOne">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F6F6"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:id="@+id/llActionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/back_arrow"
+                app:tint="@color/dark_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/euclidcirculara_bold"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="10dp"
+                android:text="One to One"
+                android:textColor="@color/dark_gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgreport"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:layout_alignParentEnd="true"
+                android:visibility="visible"
+                app:tint="@color/dark_gray"
+                app:srcCompat="@drawable/baseline_access_time_24" />
+
+
+        </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llActionbar"
+            app:layout_constraintVertical_bias="0.0">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                     android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center"
+
+
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                         android:src="@drawable/camera"
+                        app:civ_border_width="2dp"
+                        android:cropToPadding="false"
+                        android:scaleType="centerCrop"
+                        android:tint="@color/dark_gray"
+                        app:civ_border_color="@color/lighter_gray"
+                        tools:ignore="ObsoleteLayoutParam" />
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="-10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclidcirculara_bold"
+                        android:gravity="center"
+
+                        android:text="Add Image"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+                <EditText
+                    android:id="@+id/contactEt"
+                    style="@style/LoginTextInputInnerFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/euclidcirculara_semibold"
+                    android:hint="Select Member"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textColor="@color/dark_gray"
+                    android:textColorHint="@color/grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:background="@drawable/border"                        android:orientation="horizontal"
+                    android:visibility="visible"
+
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/contactmnoEt"
+                        style="@style/LoginTextInputInnerFieldStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="0.875"
+
+                        android:background="@null"
+                        android:fontFamily="@font/euclidcirculara_semibold"
+                        android:hint="Business Category"
+                        android:inputType="number"
+
+                        android:padding="5dp"
+                        android:textColor="@color/dark_gray"
+                        android:textColorHint="@color/grey" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="0.125"
+                        android:layout_margin="1dp"
+
+                        android:background="@drawable/border_four"                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/baseline_arrow_drop_down_24"
+                            app:tint="@color/dark_gray" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border"                        android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:weightSum="1">
+                    <TextView
+                        android:id="@+id/nextmeet"
+                         style="@style/LoginTextInputInnerFieldStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="0.7"
+                         android:gravity="center|start"
+                        android:paddingLeft="2dp"
+                        android:background="@null"
+                        android:fontFamily="@font/euclidcirculara_semibold"
+                        android:hint="Date"
+                        android:inputType="number"
+
+                        android:padding="5dp"
+                        android:textColor="@color/dark_gray"
+                        android:textColorHint="@color/grey" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="0.3"
+                        android:layout_margin="1dp"
+
+                        android:background="@drawable/border_four"                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                             android:id="@+id/ddate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/baseline_date_range_24"
+                            app:tint="@color/dark_gray" />
+
+
+                    </LinearLayout>
+
+                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border"                        android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:weightSum="1">
+                    <TextView
+                        android:id="@+id/ntime"
+                        style="@style/LoginTextInputInnerFieldStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="0.7"
+                        android:gravity="center|start"
+                        android:paddingLeft="2dp"
+                        android:background="@null"
+                        android:fontFamily="@font/euclidcirculara_semibold"
+                        android:hint="Time"
+                        android:inputType="number"
+
+                        android:padding="5dp"
+                        android:textColor="@color/dark_gray"
+                        android:textColorHint="@color/grey" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="0.3"
+                        android:layout_margin="1dp"
+
+                        android:background="@drawable/border_four"                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/dtime"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/baseline_access_time_24"
+                            app:tint="@color/dark_gray" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_login_fill"
+                    android:fontFamily="@font/euclidcirculara_semibold"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+
+                    />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     android:weightSum="3"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:text="Overall"
+                        android:fontFamily="@font/euclidcirculara_regular"
+                        android:layout_weight="1"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/euclidcirculara_regular"
+                        android:text="Last 1 Year"
+                        android:layout_weight="1"
+                        android:textSize="12sp"/>
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/euclidcirculara_regular"
+                        android:text="Last 6 Month"
+                        android:layout_weight="1"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/LoginTextInputInnerFieldStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_30sdp"
+
+                         android:fontFamily="@font/euclidcirculara_semibold"
+                        android:hint="155"
+                        android:inputType="number"
+                          android:textSize="36sp"
+                         android:textColor="@color/dark_gray"
+                        android:textColorHint="@color/grey" />
+
+                    <TextView
+                        style="@style/LoginTextInputInnerFieldStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginBottom="@dimen/_30sdp"
+
+                        android:fontFamily="@font/euclidcirculara_semibold"
+                        android:hint="One to One Count"
+                        android:inputType="number"
+                        android:textSize="14sp"
+                        android:padding="0dp"
+                        android:textColor="@color/dark_gray"
+                        android:textColorHint="@color/grey" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

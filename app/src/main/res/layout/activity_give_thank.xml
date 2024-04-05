@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GiveThank">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F6F6"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/llActionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/back_arrow"
+                app:tint="@color/dark_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/euclidcirculara_bold"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="10dp"
+                android:text="Give Thanks Note"
+                android:textColor="@color/dark_gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llActionbar"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+
+                    android:visibility="visible">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/border_two"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+
+                                    android:text="Name"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="K.Kumar"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Category"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Architects"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Chapter Name"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Erode Chapter"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Mobile number"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="8878687878"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/border_three"
+                            android:backgroundTint="@color/purple_200"
+                            android:text="Give Thanks Note"
+                            android:onClick="goto_main"
+                            android:fontFamily="@font/euclidcirculara_semibold"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/border_two"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+
+                                    android:text="Name"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="K.Kumar"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Category"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Architects"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Chapter Name"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Erode Chapter"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Mobile number"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="8878687878"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/border_three"
+                            android:backgroundTint="@color/purple_200"
+                            android:text="Give Thanks Note"
+                            android:onClick="goto_main"
+                            android:fontFamily="@font/euclidcirculara_semibold"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/border_two"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+
+                                    android:text="Name"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="K.Kumar"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Category"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Architects"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Chapter Name"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Erode Chapter"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Mobile number"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="8878687878"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/border_three"
+                            android:backgroundTint="@color/purple_200"
+                            android:text="Give Thanks Note"
+                            android:onClick="goto_main"
+                            android:fontFamily="@font/euclidcirculara_semibold"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

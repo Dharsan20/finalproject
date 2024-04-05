@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GiveThankDetails">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F6F6"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:id="@+id/llActionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/back_arrow"
+                app:tint="@color/dark_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/euclidcirculara_bold"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="10dp"
+                android:text="Give Thanks Note"
+                android:textColor="@color/dark_gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llActionbar"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/euclidcirculara_bold"
+                    android:gravity="center|start"
+                    android:paddingLeft="10sp"
+                    android:text="Referral Info"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/border_two"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:weightSum="5">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+
+                                    android:text="Name"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="K.Kumar"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Category"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Architects"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Chapter Name"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Erode Chapter"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_5sdp"
+
+                            android:visibility="visible"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_bold"
+                                    android:gravity="center|start"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="Mobile number"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center"
+
+                                    android:text=":"
+                                    android:textColor="#110019"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.45"
+
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/euclidcirculara_light"
+                                    android:gravity="center|start"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:text="8878687878"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclidcirculara_bold"
+                        android:gravity="center|start"
+                        android:paddingLeft="10sp"
+                        android:text="Converted Referral"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/contactEt"
+                        style="@style/LoginTextInputInnerFieldStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="10sp"
+                        android:background="@drawable/border"
+                        android:fontFamily="@font/euclidcirculara_semibold"
+                        android:hint="Coverted Business"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:textColor="@color/dark_gray"
+                        android:textColorHint="@color/grey" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:background="@drawable/border"                        android:orientation="horizontal"
+                        android:visibility="visible"
+
+                        android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/contactmnoEt"
+                        style="@style/LoginTextInputInnerFieldStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="0.875"
+
+                        android:background="@null"
+                        android:fontFamily="@font/euclidcirculara_semibold"
+                        android:hint="Coverted Date"
+                        android:inputType="number"
+
+                        android:padding="5dp"
+                        android:textColor="@color/dark_gray"
+                        android:textColorHint="@color/grey" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="0.125"
+                            android:layout_margin="1dp"
+
+                            android:background="@drawable/border_four"                        android:orientation="horizontal"
+                            android:visibility="visible"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                 android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:visibility="visible"
+                                app:srcCompat="@drawable/baseline_date_range_24"
+                                app:tint="@color/dark_gray" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/atinfoEt"
+                        style="@style/LoginTextInputInnerFieldStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="10sp"
+                        android:background="@drawable/border"
+                        android:fontFamily="@font/euclidcirculara_semibold"
+                        android:hint="Comments"
+                        android:inputType="textMultiLine"
+                        android:maxLines="5"
+                        android:minHeight="96dp"
+                        android:padding="5dp"
+                        android:textColor="@color/dark_gray"
+                        android:textColorHint="@color/grey" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclidcirculara_bold"
+                        android:gravity="center|start"
+                        android:paddingLeft="10sp"
+                        android:text="Failed Report"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                         android:orientation="vertical"
+                        android:visibility="visible"
+                        >
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:text="Irrelevent Referral"
+                                android:textSize="14sp"/>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:text="My Quote is Not Approved"
+                                android:textSize="14sp"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:text="Already Executed some body"
+                                android:textSize="14sp"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:text="Fake Referral"
+                                android:textSize="14sp"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:text="He does not know our Member "
+                                android:textSize="14sp"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:text="My Reason is not listed"
+                                android:textSize="14sp"/>
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_login_fill"
+                        android:fontFamily="@font/euclidcirculara_semibold"
+                        android:text="Send Referral"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
